@@ -2,7 +2,8 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{!-- The big featured header --}}
-<header class="main-header">
+<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <!-- {{navigation}} -->
     <div class="main-header-content inner">
         <h1 class="page-title"><a href="/">{{@blog.title}}</a></h1>
         <h2 class="page-description">{{@blog.description}}</h2>
