@@ -6,7 +6,7 @@
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<header class="main-header">
+<header class="main-header" {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
     <div class="main-header-content inner">
         <h1 class="page-title"><a href="/">{{@blog.title}}</a></h1>
         <h2 class="page-description">{{@blog.description}}</h2>
