@@ -48,6 +48,12 @@
         {{!-- The tiny footer at the very bottom --}}
         <footer class="site-footer clearfix">
             <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <div
+                class="fb-like"
+                data-share="true"
+                data-width="450"
+                data-show-faces="true">
+            </div>
         </footer>
     </div>
     <script type="text/javascript" src="{{asset "js/jquery.js"}}"></script>
@@ -55,19 +61,35 @@
     <script type="text/javascript" src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '1802664529966080',
+                xfbml      : true,
+                version    : 'v2.6'
+            });
+        };
 
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 </html>
