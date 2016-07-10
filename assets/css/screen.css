@@ -1405,6 +1405,7 @@ search
     font-size: 1rem;
 }
 
+
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
@@ -1426,4 +1427,21 @@ search
 
 .newsletter-form-navbar input {
     width: 170px;
+}
+
+/*
+social buttons
+ */
+
+.share-buttons-wrapper {
+    /* float: right; */
+    text-align: center;
+}
+
+.share-buttons-wrapper share-button {
+    background-color: transparent;
+}
+
+.share-buttons-wrapper share-button:hover {
+    background-color: transparent;
 }
