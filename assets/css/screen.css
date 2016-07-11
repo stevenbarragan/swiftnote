@@ -1393,7 +1393,12 @@ search
 #results h2{
     font-size: 1rem;
 }
+
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+
+.bottom-subscribe {
+    text-align: center;
+}

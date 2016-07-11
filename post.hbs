@@ -27,6 +27,21 @@
             {{content}}
         </section>
 
+        {{#if @labs.subscribers}}
+            <div class="bottom-subscribe">
+                <h5>Subscribe to {{@blog.title}}</h5>
+                <p>Get the latest posts delivered right to you.</p>
+
+                {{subscribe_form
+                    form_class="newsletter-form"
+                    input_class="form-control"
+                    button_class="btn btn-primary"
+                    placeholder="Enter your email address"
+                    autofocus=""
+                }}
+            </div>
+        {{/if}}
+
         <div
             class="fb-like"
             data-share="true"
