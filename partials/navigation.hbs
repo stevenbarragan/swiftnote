@@ -6,11 +6,13 @@
             {{/foreach}}
         </ul>
         <div class="nav-extra">
-            <form>
-                <input id="search-field" type="search" placeholder="search" />
-            </form>
-            <section id="results"></section>
-            <a href="{{@blog.url}}/rss/">Subscribe</a>
+            {{subscribe_form
+                form_class="newsletter-form newsletter-form-navbar"
+                input_class="form-control subscribe-field"
+                button_class="btn btn-primary"
+                placeholder="Subscribe"
+                autofocus=""
+            }}
         </div>
     </div>
 </nav>

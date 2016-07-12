@@ -1004,14 +1004,25 @@ ul.nav {
     blockquote {
         margin-left: 0;
     }
+
+    .inner {
+        text-align: center;
+    }
+
     .nav-extra{
-        display: none;
+        float: none;
+        padding-top: 10px;
+        text-align: center;
     }
     .main-header {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         height: auto;
+    }
+
+    .newsletter-form-navbar button.btn {
+        display: inline;
     }
 
     .archive-template .main-header {
@@ -1401,4 +1412,18 @@ search
 
 .bottom-subscribe {
     text-align: center;
+}
+
+.newsletter-form-navbar .form-group{
+    float: left;
+}
+
+.newsletter-form-navbar button {
+    background-color: #e74c3c;
+    margin-left:      10px;
+    display:          none;
+}
+
+.newsletter-form-navbar input {
+    width: 170px;
 }
