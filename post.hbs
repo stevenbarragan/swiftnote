@@ -25,6 +25,19 @@
 
         <section class="post-content">
             {{content}}
+
+            <div class="share-buttons-wrapper">
+                <share-button></share-button>
+            </div>
+        </section>
+
+        <section class="post-more">
+            {{#prev_post}}
+            <p>Prev Post: <a class="" href="{{url}}">{{title}}</a></p>
+            {{/prev_post}}
+            {{#next_post}}
+            <p>Next Post: <a class="" href="{{url}}">{{title}}</a></p>
+            {{/next_post}}
         </section>
 
         {{#if @labs.subscribers}}
@@ -49,18 +62,9 @@
             data-show-faces="true">
         </div>
 
-        <section class="post-more">
-            {{#prev_post}}
-            <p>Prev Post: <a class="" href="{{url}}">{{title}}</a></p>
-            {{/prev_post}}
-            {{#next_post}}
-            <p>Next Post: <a class="" href="{{url}}">{{title}}</a></p>
-            {{/next_post}}
-        </section>
-        <section id="disqus_thread">
-        </section>
+        <section id="disqus_thread"></section>
     </article>
-    <div id="disqus_thread"></div>
+
 <script>
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
